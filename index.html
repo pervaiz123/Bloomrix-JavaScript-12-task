@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form Demo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Register</h1>
+
+    <form id="registrationForm" novalidate>
+      <div class="form-group">
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <span class="error" data-error-for="fullName"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error" data-error-for="email"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password *</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="8"
+        />
+        <span class="error" data-error-for="password"></span>
+        <div id="pwdStrength" class="strength"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password *</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+        <span class="error" data-error-for="confirmPassword"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="bio">Bio (max 200 chars) *</label>
+        <textarea
+          id="bio"
+          name="bio"
+          rows="4"
+          maxlength="200"
+          required
+        ></textarea>
+        <div class="counter" id="bioCounter">0 / 200</div>
+        <span class="error" data-error-for="bio"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Skills *</label>
+        <div id="skillContainer" class="skill-list" data-component="skill-list">
+          <input
+            type="text"
+            id="skillInput"
+            placeholder="Add a skill and press Enter"
+          />
+          <ul id="skillList"></ul>
+        </div>
+        <span class="error" data-error-for="skills"></span>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+        <button type="reset" id="resetBtn">Reset</button>
+      </div>
+    </form>
+
+    <!-- Success message -->
+    <div id="successMessage" class="modal hidden" data-modal="success">
+      <div class="modal-content">
+        <h2>Success!</h2>
+        <p>Your registration was submitted.</p>
+        <button class="close-modal" data-close="success">Close</button>
+      </div>
+    </div>
+
+    <!-- Confirmation modal -->
+    <div id="confirmModal" class="modal hidden" data-modal="confirm">
+      <div class="modal-content">
+        <h3>Confirm Submission</h3>
+        <p>Are you sure you want to submit the form?</p>
+        <button id="confirmYes">Yes</button>
+        <button id="confirmNo">No</button>
+      </div>
+    </div>
+
+    <!-- Tabs for extra info -->
+    <div class="tabs">
+      <button class="tab active" data-tab="experience">Experience</button>
+      <button class="tab" data-tab="preferences">Preferences</button>
+    </div>
+    <div class="tab-content" id="experience">
+      <p>Dummy experience details...</p>
+    </div>
+    <div class="tab-content hidden" id="preferences">
+      <p>Dummy preferences details...</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

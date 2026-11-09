@@ -1,0 +1,114 @@
+/* Basic layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+h1 {
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.error {
+  color: #d00;
+  font-size: 0.9em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+/* Strength indicator */
+.strength {
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+/* Counter */
+.counter {
+  font-size: 0.8em;
+  text-align: right;
+  color: #555;
+}
+
+/* Skill list */
+.skill-list {
+  display: flex;
+  flex-direction: column;
+}
+#skillInput {
+  margin-bottom: 5px;
+}
+#skillList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#skillList li {
+  background: #e0e0e0;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 2px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  margin-right: 5px;
+}
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal.hidden {
+  display: none;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+/* Tabs */
+.tabs {
+  margin-top: 30px;
+}
+.tab {
+  padding: 8px 12px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}
+.tab.active {
+  background: #bbb;
+}
+.tab-content {
+  margin-top: 10px;
+}
+.tab-content.hidden {
+  display: none;
+}
