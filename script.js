@@ -1,4 +1,3 @@
-/* ---- Utility Functions ---- */
 function $(selector) {
   return document.querySelector(selector);
 }
